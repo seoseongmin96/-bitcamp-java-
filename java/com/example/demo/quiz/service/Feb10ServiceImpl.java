@@ -1,5 +1,6 @@
 package com.example.demo.quiz.service;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,8 @@ import java.util.Scanner;
  */
 public class Feb10ServiceImpl implements Feb10Service{
 
+
+    private Random random;
 
     @Override
     public void bubbleSort(Scanner scanner) {
@@ -80,6 +83,8 @@ public class Feb10ServiceImpl implements Feb10Service{
 
     @Override
     public void mergeSort(Scanner scanner) {
+        
+
 
     }
 
@@ -94,12 +99,38 @@ public class Feb10ServiceImpl implements Feb10Service{
     }
 
     @Override
-    public void rectangleStarPrint(Scanner scanner) {
+    public String rectangleStarPrint(Scanner scanner) {
+        String res = "";
+        int rand = random.nextInt(50);
+        System.out.println("좌측90도 직각삼각형 별찍기");
+        System.out.println("삼각형의 길이 랜덤으로 생성한 값 : " + rand);
+        for(int i = 0; i < rand; i ++){
+            for(int j = 0; j <= i; j++){
+                res += String.format("*");
+            }
+            res += String.format("\n");
+        }
+        return res;
 
     }
 
     @Override
-    public void triangleStarPrint(Scanner scanner) {
+    public String triangleStarPrint(Scanner scanner) {
+        String res = "";
+        int rand = random.nextInt(50);
+        System.out.println("정삼각형 별찍기");
+        System.out.println("정삼각형의 길이 랜덤으로 생성한 값 : " + rand);
+        for(int i = 0; i < rand; i++){
+            for(int j = rand-i; j >= 0 ;j--){
+                res += String.format("  ");
+            }
+            for(int k = 1; k < i; k++){
+                res += String.format("*");
+            }
+            res += String.format("\n");
+        }
+        return res;
+
 
     }
 }

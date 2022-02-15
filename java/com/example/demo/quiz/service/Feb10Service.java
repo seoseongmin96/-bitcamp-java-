@@ -28,7 +28,7 @@ public interface Feb10Service {
     void zigzag(Scanner scanner);
     // 1인
     // 좌측90도 직각삼각형 별찍기
-    void rectangleStarPrint(Scanner scanner);
+    String rectangleStarPrint(Scanner scanner);
     // 정삼각형 별찍기
-    void triangleStarPrint(Scanner scanner);
+    String triangleStarPrint(Scanner scanner);
 }

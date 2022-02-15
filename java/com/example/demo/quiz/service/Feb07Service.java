@@ -18,5 +18,5 @@ public interface Feb07Service {
     void rps(Scanner scanner);
     void getPrime(Scanner scanner);
     void leapYear(Scanner scanner);
-    void numberGolf(Scanner scanner);
+    String numberGolf(Scanner scanner);
 }

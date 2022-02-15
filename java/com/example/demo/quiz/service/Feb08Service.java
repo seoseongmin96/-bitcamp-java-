@@ -16,7 +16,7 @@ import java.util.Scanner;
 public interface Feb08Service {
     void timestable(Scanner scanner);
     void baseball(Scanner scanner);
-    void lotto(Scanner scanner);
+    String lotto(Scanner scanner);
     void bank(Scanner scanner);
     void book(Scanner scanner);
 }
