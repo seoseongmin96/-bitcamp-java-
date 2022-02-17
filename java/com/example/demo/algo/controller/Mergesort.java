@@ -1,8 +1,10 @@
-package com.example.demo;
+package com.example.demo.algo.controller;
+
+import java.io.IOException;
 
 /**
- * packageName: com.example.demo
- * fileName   : Rps
+ * packageName: com.example.demo.algo.controller
+ * fileName   : Mergesort
  * author     : seoseongmin
  * date       : 2022-02-15
  * desc       :
@@ -15,10 +17,10 @@ package com.example.demo;
  * ================================
  * 2022-02-15    seoseongmin        최초 생성
  */
-public class Rps {
+public class Mergesort {
     public static void main(String[] args) {
-        int a = (int)(Math.random()*3)+1;
-        int b = (int)(Math.random()*3)+1;
+
+    }
 }
-}
+
 
