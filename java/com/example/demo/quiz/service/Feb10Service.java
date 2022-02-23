@@ -16,10 +16,10 @@ import java.util.Scanner;
 public interface Feb10Service {
     // 아래 문제들은 모두 스케너 없이, Math 랜덤으로 처리합니다.
     // 1인
-    void bubbleSort(Scanner scanner);
-    void insertionSort(Scanner scanner);
+    void bubbleSort(int[] arr);
+    void insertionSort(int[]arr);
     //
-    void selectionSort(Scanner scanner);
+    void selectionSort(int[]arr);
     void quickSort(Scanner scanner);
     void mergeSort(Scanner scanner);
     // 1인
@@ -28,7 +28,8 @@ public interface Feb10Service {
     void zigzag(Scanner scanner);
     // 1인
     // 좌측90도 직각삼각형 별찍기
-    String rectangleStarPrint(Scanner scanner);
+    String rectangleStarPrint();
     // 정삼각형 별찍기
-    String triangleStarPrint(Scanner scanner);
+    String triangleStarPrint();
+    void print(int[]arr);
 }

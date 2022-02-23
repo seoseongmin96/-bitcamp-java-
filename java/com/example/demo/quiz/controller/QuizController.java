@@ -17,10 +17,11 @@ import java.util.Scanner;
  */
 public class QuizController {
    public static void execute(Scanner scanner) {
-        Feb06Service feb06Service = new Feb06ServiceImpl();
-        Feb07Service feb07Service = new Feb07ServiceImpl();
-        Feb08Service feb08Service = new Feb08ServiceImpl();
-        Feb10Service feb10Service = new Feb10ServiceImpl();
+       Feb06Service feb06Service = new Feb06ServiceImpl();
+       Feb07Service feb07Service = new Feb07ServiceImpl();
+       Feb08Service feb08Service = new Feb08ServiceImpl();
+       Feb10Service feb10Service = new Feb10ServiceImpl();
+       int [] arr1 = new int[10];
        while (true) {
            System.out.println("[서브메뉴]\n 0)Exit 1)2월 6일 2)2월 7일 3)2월 8일 4)2월 9일 5)2월 10일");
            switch (scanner.next()) {
@@ -56,8 +57,8 @@ public class QuizController {
                        }
                    }
 
-                   case "2":
-                   System.out.println("2월 7일");
+               case "2":
+                       System.out.println("2월 7일");
 
 
                        while (true){
@@ -91,9 +92,9 @@ public class QuizController {
                                    System.out.println("잘못된 정보입니다.");break;
                            }
                        }
-                    case  "3":
-                   System.out.println("2월 8일");
-                    while (true){
+               case  "3":
+                        System.out.println("2월 8일");
+                        while (true){
                         String menu = "\"[8일 소메뉴] 0. EXIT 1. 구구단 2. 야구 3. 로또 4. 은행입출금 5. 죄석예약";
                         System.out.println(menu);
                         String select = scanner.next();
@@ -121,8 +122,8 @@ public class QuizController {
 
                         }
                     }
-                    case "4":
-                   System.out.println("2월 9일");
+               case "4":
+                        System.out.println("2월 9일");
                case "5" :
                    System.out.println("2월 10일");
                    while(true){
@@ -137,13 +138,32 @@ public class QuizController {
                                System.out.println("Exit");return;
                            case "1" :
                                System.out.println("1. bubbleSort");
-                               feb10Service.bubbleSort(scanner);break;
+                               for(int i = 0; i < arr1.length; i++){
+                                   arr1[i] = (int) (Math.random() * 100);
+                               }
+                               feb10Service.bubbleSort(arr1);
+                               System.out.println("버블");
+                               System.out.println();
+                               break;
                            case "2" :
                                System.out.println("1. insertionSort");
-                               feb10Service.insertionSort(scanner);break;
+                               for(int i = 0; i < arr1.length; i++){
+                                   arr1[i] = (int) (Math.random() * 100);
+                               }
+                               feb10Service.insertionSort(arr1);
+                               System.out.println("인설트");
+                               System.out.println();
+                               break;
                            case "3" :
                                System.out.println("3. selectionSort");
-                               feb10Service.selectionSort(scanner);break;
+                               for(int i = 0; i < arr1.length; i++){
+                                   arr1[i] = (int) (Math.random() * 100);
+                               }
+                               feb10Service.selectionSort(arr1);
+                               System.out.println();
+
+                               System.out.println("선택");
+                               break;
                            case "4" :
                                System.out.println("4. quickSot");
                                feb10Service.quickSort(scanner);break;
@@ -157,11 +177,13 @@ public class QuizController {
                                System.out.println("7. zigzag");
                                feb10Service.zigzag(scanner);break;
                            case "8" :
-                               System.out.println("8. rectangleStarPrint");
-                               feb10Service.rectangleStarPrint(scanner);break;
+                               res = feb10Service.rectangleStarPrint();
+                               System.out.println(res);
+                               break;
                            case  "9" :
-                               System.out.println("9. triangleStarPrint");
-                               feb10Service.triangleStarPrint(scanner);break;
+                               res = feb10Service.triangleStarPrint();
+                               System.out.println(res);
+                               break;
                            default :
                                System.out.println("잘못된 정보입니다");break;
                        }

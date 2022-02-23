@@ -19,13 +19,12 @@ import static jdk.nashorn.internal.objects.Global.print;
  */
 public class Feb10ServiceImpl implements Feb10Service {
 
-
-    private Random random;
+    Random random = new Random();
     private int[] arr;
 
     @Override
-    public void bubbleSort(Scanner scanner) {
-        int arr[] = new int[0]; {
+    public void bubbleSort(int[] arr) {
+
         // 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
         for(int i = 0; i < arr.length; i++) {
 
@@ -42,12 +41,12 @@ public class Feb10ServiceImpl implements Feb10Service {
         }
 
         print(arr);
-    }
+
 
     }
 
     @Override
-    public void insertionSort(Scanner scanner) { // 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
+    public void insertionSort(int[]arr) { // 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
         for(int i = 1; i < arr.length; i++) {
             // 타겟 넘버
             int target = arr[i];
@@ -74,7 +73,7 @@ public class Feb10ServiceImpl implements Feb10Service {
 
 
     @Override
-    public void selectionSort(Scanner scanner) {// 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
+    public void selectionSort(int[]arr) {// 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
         for(int i = 0; i < arr.length - 1; i++) {
             int min_index = i;
 
@@ -255,7 +254,7 @@ public class Feb10ServiceImpl implements Feb10Service {
     }
 
     @Override
-    public String rectangleStarPrint(Scanner scanner) {
+    public String rectangleStarPrint() {
         String res = "";
         int rand = random.nextInt(50);
         System.out.println("좌측90도 직각삼각형 별찍기");
@@ -271,7 +270,7 @@ public class Feb10ServiceImpl implements Feb10Service {
     }
 
     @Override
-    public String triangleStarPrint(Scanner scanner) {
+    public String triangleStarPrint() {
         String res = "";
         int rand = random.nextInt(50);
         System.out.println("정삼각형 별찍기");
@@ -280,7 +279,7 @@ public class Feb10ServiceImpl implements Feb10Service {
             for (int j = rand - i; j >= 0; j--) {
                 res += String.format("  ");
             }
-            for (int k = 1; k < i; k++) {
+            for (int k = 1; k < i * 2; k++) {
                 res += String.format("*");
             }
             res += String.format("\n");
@@ -288,6 +287,13 @@ public class Feb10ServiceImpl implements Feb10Service {
         return res;
 
 
+    }
+    @Override
+    public void print(int[] arr) {
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
     }
 }
 
