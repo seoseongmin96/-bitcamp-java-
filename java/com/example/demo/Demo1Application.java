@@ -18,7 +18,7 @@ public class Demo1Application {
 
         Scanner scanner = new Scanner(System.in);
         AlgorithmController algorithmController = new AlgorithmController();
-        AuthController memberController = new AuthController();
+        AuthController authController = new AuthController();
         OopController oopController = new OopController();
         QuizController quizController = new QuizController();
         while (true) {
